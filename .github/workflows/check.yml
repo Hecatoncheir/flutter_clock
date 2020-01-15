@@ -17,6 +17,7 @@ jobs:
           channel: 'dev'
 
       - name: Get packages
+        working-directory: digital_clock
         run: flutter pub get
 
       - name: Run tests
@@ -45,7 +46,7 @@ jobs:
         run: sudo apt install -y lcov
 
       - name: Prepare coverage
-        working-directory: application
+        working-directory: application/digital_clock
         run: genhtml coverage/lcov.info -o coverage
 
 #  codemetrics:
