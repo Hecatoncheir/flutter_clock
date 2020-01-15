@@ -21,6 +21,7 @@ jobs:
         run: flutter pub get
 
       - name: Run tests
+        working-directory: digital_clock
         run: flutter test --coverage
 
       - name: Upload test artifact
